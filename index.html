@@ -8,45 +8,82 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
-  <!-- Sign-up form start -->
+  <main class="main">
+     
+    <div class="card card__newsletter">
+      <!--Contenido de la tarjeta-->
+      <div class="card__content">
+        <h1 class="card__title">Stay updated!</h1>
 
-  Stay updated!
+        <p class="card__description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
 
-  Join 60,000+ product managers receiving monthly updates on:
+        <div class="card__list">
+          <div class="list__group">
+            <img src="./assets/images/icon-list.svg" alt="icon list" class="list__icon" />
+            <p class="list__item">Product discovery and building what matters</p>
+          </div>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+          <div class="list__group">
+            <img src="./assets/images/icon-list.svg" alt="icon list" class="list__icon" />
+            <p class="list__item">Measuring to ensure updates are a success</p>
+          </div>
 
-  Email address
-  email@company.com
+          <div class="list__group">
+            <img src="./assets/images/icon-list.svg" alt="icon list" class="list__icon" />
+            <p class="list__item">And much more!</p>
+          </div>
+        </div>
 
-  Subscribe to monthly newsletter
+        <form class="form">
+          <div class="form__group">
+            <label for="email" class="form__label">Email address</label>
+            <input id="email" name="email" type="email" placeholder="email@company.com" class="form__input" required />
+            <p class="form__error">Valid email required</p>
+          </div>
 
-  <!-- Sign-up form end -->
+          <input type="submit" class="form__btn" value="Subscribe to monthly newsletter" />
+          
+        </form>
 
-  <!-- Success message start -->
+        <footer class="footer">
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Roraima</a>.
+          </div>
+        </footer>
+      </div>
 
-  Thanks for subscribing!
+      <!--Imagen de la tarjeta-->
+      <div class="card__image">
+        <picture>
+          <source media="(max-width: 810px)" srcset="./assets/images/illustration-sign-up-mobile.svg"/>
+          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign Up" class="image" />
+        </picture>
+      </div>
+    </div>   
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+    <div class="card card__congratulations">
+      <div class="congratulations__container">
+        <div class="img__success-container">
+          <img src="./assets/images/icon-list.svg" class="img__success" />
+        </div>
 
-  Dismiss message
+        <h2 class="card__subtitle">Thanks for subscribing!</h2>
+        <p class="card__description">
+          A confirmation email has been sent to <span>ash@loremcompany.com.</span> Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
 
-  <!-- Success message end -->
+      <button class="form__btn">Dismiss message</button>
+    </div>
+
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

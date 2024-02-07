@@ -1,0 +1,239 @@
+:root {
+    --color-fondo: hsl(235, 18%, 26%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-dark-gray: hsl(234, 29%, 20%);
+    --color-light-gray: hsl(231, 7%, 60%);
+    --color-red: hsl(4, 100%, 67%);
+    --color-hover: linear-gradient(90deg, #FF527B, hsl(4, 100%, 67%));
+    --shadow: 0 0 25px hsla(4, 100%, 67%, 0.8);
+    
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--color-fondo);
+}
+
+.main {
+    width: 50rem;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Tarjeta del newsletter */
+
+.card__newsletter {
+    display: none;
+}
+
+.card__content {
+    width: 100%;
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--color-dark-gray);
+}
+
+.card__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card__description {
+    font-size: 0.9rem;
+    color: var(--color-dark-gray);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.card__description span {
+    font-weight: bold;
+}
+
+.card__list {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: var(--color-dark-gray);
+}
+
+.list__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+}
+
+.form {
+    width: 100%;     
+}
+
+.form__group {
+    position: relative;
+    display: flex;   
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form__label,
+.form__input,
+.form__btn {
+    width: 100%;
+}
+
+.form__label {
+    font-size: 0.7rem;
+    font-weight: bold; 
+    margin-bottom: 0.5rem;   
+}
+
+.form__input {
+    padding: 1rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 0.5rem;
+    color: var(--color-dark-gray);
+}
+
+.form__input:focus {
+    outline: 1px solid  var(--color-dark-gray);
+}
+
+.form__error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-red);
+    font-size: 0.7rem;
+    font-weight: bold;
+    
+}
+
+.form__btn {
+    padding: 1rem;
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    background: var(--color-hover);
+    box-shadow: var(--shadow);
+}
+
+.card__image {
+    flex-basis: 45%;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+}
+
+.footer {margin-top: 1rem;}
+.attribution { font-size: 0.7rem; text-align: center; color: var(--color-dark-gray); }
+.attribution a { color: var(--color-dark-gray) }
+
+
+/* Tarjeta de agradecimiento */
+.card__congratulations {
+    display: flex;
+    flex-direction: column;
+    width: 28rem;
+    padding: 3rem;
+}
+
+.congratulations__container {
+    margin-bottom: 1rem;
+}
+
+.img__success-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.img__success {
+    width: 4rem;
+}
+
+.card__subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-dark-gray);
+    margin-bottom: 1rem;
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 810px) {
+    .main {
+        width: 100%;        
+    }
+    
+    .card {        
+        flex-direction: column;        
+        padding: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+
+    
+    .card__content {
+        order: 2;
+    }
+
+    .card__title {
+        font-size: 2.5rem;
+    }
+
+    .card__list {
+        margin-bottom: 2rem;
+    }
+
+    .list__group {
+        align-items: flex-start;
+    }
+
+    .card__image {
+        order: 1;
+    }
+
+    .card__congratulations {
+        padding: 2rem;
+        padding-top: 4rem;
+        justify-content: space-between;
+    }
+
+    .card__subtitle {
+        font-size: 2.5rem;
+    }
+
+}
