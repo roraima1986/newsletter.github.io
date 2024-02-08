@@ -4,6 +4,7 @@
     --color-dark-gray: hsl(234, 29%, 20%);
     --color-light-gray: hsl(231, 7%, 60%);
     --color-red: hsl(4, 100%, 67%);
+    --color-light-red: hsla(4, 100%, 67%, 0.3);
     --color-hover: linear-gradient(90deg, #FF527B, hsl(4, 100%, 67%));
     --shadow: 0 0 25px hsla(4, 100%, 67%, 0.8);
     
@@ -34,18 +35,14 @@ body {
     margin: 0 auto;
 }
 
-.card {
+/* Tarjeta del newsletter */
+
+.card__newsletter {
     display: flex;
     flex-direction: row;
     background-color: var(--color-white);
     padding: 1rem;
     border-radius: 1rem;
-}
-
-/* Tarjeta del newsletter */
-
-.card__newsletter {
-    display: none;
 }
 
 .card__content {
@@ -166,10 +163,12 @@ body {
 
 /* Tarjeta de agradecimiento */
 .card__congratulations {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 28rem;
     padding: 3rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
 }
 
 .congratulations__container {
@@ -198,14 +197,13 @@ body {
         width: 100%;        
     }
     
-    .card {        
+    .card__newsletter {        
         flex-direction: column;        
         padding: 0;
         border-radius: 0;
         min-height: 100vh;
     }
 
-    
     .card__content {
         order: 2;
     }
@@ -227,6 +225,8 @@ body {
     }
 
     .card__congratulations {
+        min-height: 100vh;
+        border-radius: 0;
         padding: 2rem;
         padding-top: 4rem;
         justify-content: space-between;

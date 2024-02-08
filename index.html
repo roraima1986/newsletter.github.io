@@ -8,13 +8,16 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
+  <!--CSS-->
   <link rel="stylesheet" href="./styles.css" />
+  <!--JS-->
+  <script src="./main.js" defer></script>
 </head>
 <body>
 
   <main class="main">
      
-    <div class="card card__newsletter">
+    <div class="card__newsletter">
       <!--Contenido de la tarjeta-->
       <div class="card__content">
         <h1 class="card__title">Stay updated!</h1>
@@ -43,11 +46,11 @@
         <form class="form">
           <div class="form__group">
             <label for="email" class="form__label">Email address</label>
-            <input id="email" name="email" type="email" placeholder="email@company.com" class="form__input" required />
-            <p class="form__error">Valid email required</p>
+            <input id="email" name="email" type="text" placeholder="email@company.com" class="form__input" />
+            <p class="form__error"></p>
           </div>
 
-          <input type="submit" class="form__btn" value="Subscribe to monthly newsletter" />
+          <input type="button" class="form__btn" id="send-subscribe" value="Subscribe to monthly newsletter" />
           
         </form>
 
@@ -68,7 +71,8 @@
       </div>
     </div>   
 
-    <div class="card card__congratulations">
+    <!--Success message-->
+    <div class="card__congratulations">
       <div class="congratulations__container">
         <div class="img__success-container">
           <img src="./assets/images/icon-list.svg" class="img__success" />
@@ -80,7 +84,7 @@
         </p>
       </div>
 
-      <button class="form__btn">Dismiss message</button>
+      <button class="form__btn" id="dismiss-message" type="button">Dismiss message</button>
     </div>
 
   </main>
