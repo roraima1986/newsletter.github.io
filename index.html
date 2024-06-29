@@ -43,14 +43,14 @@
           </div>
         </div>
 
-        <form class="form">
+        <form class="form" novalidate autocomplete="off">
           <div class="form__group">
             <label for="email" class="form__label">Email address</label>
-            <input id="email" name="email" type="text" placeholder="email@company.com" class="form__input" />
+            <input id="email" name="email" type="email" placeholder="email@company.com" class="form__input" required />
             <p class="form__error"></p>
           </div>
 
-          <input type="button" class="form__btn" id="send-subscribe" value="Subscribe to monthly newsletter" />
+          <input type="submit" class="form__btn" id="send-subscribe" value="Subscribe to monthly newsletter" />
           
         </form>
 

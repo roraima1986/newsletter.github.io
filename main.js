@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const sendSubscribe = document.querySelector('#send-subscribe')
+    const form = document.querySelector('.form')
     const dismissMessage = document.querySelector('#dismiss-message')
     const email = document.querySelector('#email')
     const errorMessage = document.querySelector('.form__error')
@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Verificamos si el correo es valido antes de enviar la peticion
-    sendSubscribe.addEventListener('click', () => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
         // Situaciones que muestran el mensaje de error y ocultan las clases correspondientes        
         if(email.value === '') {
             errorMessage.innerHTML = 'It looks like you forgot to add your email'
